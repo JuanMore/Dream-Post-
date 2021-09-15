@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>Dream Post | An online dream journal</title>
+    <title>Document</title>
 </head>
-<body style="background-color: rgb(247, 107, 27); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+<body style="background-color:#f6fcfc;">
     <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgb(250, 250, 250);">
         <div class="container-lg">
-          <a class="navbar-brand text-dark" href="/">Dream Post</a>
+          <a class="navbar-brand text-dark" href="/" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Dream Post</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse align-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mx-0">
               <li class="nav-item">
-                <a class="nav-link active " aria-current="page" href="/">Home</a>
+                <a class="nav-link active " aria-current="page" href="/articles/new">New Entry</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     <div class="container">
-         <h1 class="mb-4 text-center align-content-center mt-5">New Entry</h1>
-        <form action="/articles" method="POST">
-            <%- include('_formBoilerplate') %> 
-    </form>
+         <h1 class="mb-1"> <%= article.title %> </h1>
+         <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %> </div>
+         <a href="/" class="btn btn-secondary">All Entries</a>
+         <a href="/articles/edit/<%= article.id %> " class="btn btn-info">Edit</a>
+        
+         <div>
+         <%- article.sanitizedHtml %> 
+         </div>
 </div>
 </body>
 </html>
