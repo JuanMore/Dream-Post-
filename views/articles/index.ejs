@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Write Now Blog</h1>
+    <a href="/articles/new" class="btn btn-success mb-auto float-end">New Article</a>
+
+    <% articles.forEach(article => {%> 
+        <div class="card mt-5">
+            <h4 class="card-title p-3">
+                <%= article.title %> 
+            </h4>
+            <span class="card-subtitle text-muted py-2 p-3"> <%= article.createdAt.toLocaleDateString() %></span>
+            <div class="card-body">
+                <%= article.description %> 
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary">Read More</a>
+                <a class="btn btn-secondary">Edit</a>
+                <a class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        <% }) %> 
+    
+</div>
+</body>
+</html>
