@@ -7,7 +7,7 @@ const methodOverride = require('method-override')
 
 // const path = require('path')
 
-mongoose.connect('mongodb+srv://Moreno-Dev:<>@cluster0.6apug.mongodb.net/DreamPost', {
+mongoose.connect('mongodb+srv://Moreno-Dev:<Shade-Dev99>@cluster0.6apug.mongodb.net/DreamPost', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
