@@ -9,6 +9,8 @@ To get the Node server running locally:
 - Install MongoDB Community Edition ([instructions](https://docs.mongodb.com/manual/installation/#tutorials)) and run it by executing `mongod`
 - `npm run dev` to start the local server
 
+# Code Overview
+
 ## Dependencies
 
 - [expressjs](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
@@ -21,7 +23,11 @@ To get the Node server running locally:
 - [slugify](https://github.com/simov/slugify) - For slugifying Strings
 - [colors](https://github.com/simov/slugify) - For getting colors in NodeJs console
 
-
+# Application Structure
+- `app.js` - The entry point to our application. This file defines our express server and connects it to MongoDB using mongoose. It also requires the routes and models we'll be using in the application.
+- `routes/` - This folder contains the route definitions for our API.
+- `models/` - This folder contains the schema definitions for our Mongoose models.
+-  `views/articles` - This directory containes our show pages for displaying
 
 ![snip_1](https://user-images.githubusercontent.com/20747118/133363031-26cd9600-a297-4e98-98c8-24c8750e1ba1.JPG)
 
