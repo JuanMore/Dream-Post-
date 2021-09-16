@@ -7,7 +7,7 @@ const methodOverride = require('method-override')
 
 // const path = require('path')
 
-mongoose.connect('mongodb://localhost:27017/WriteNow', {
+mongoose.connect('mongodb://localhost:27017/DreamPost', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
