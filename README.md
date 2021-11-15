@@ -29,6 +29,10 @@ To get the Node server running locally:
 - `models/` - This folder contains the schema definitions for our Mongoose models.
 -  `views/articles` - This directory containes our show pages for displaying
 
+## Check out demo here: https://mysterious-caverns-43203.herokuapp.com/
+
 ![snip_1](https://user-images.githubusercontent.com/20747118/133363031-26cd9600-a297-4e98-98c8-24c8750e1ba1.JPG)
 
 ![snip_2](https://user-images.githubusercontent.com/20747118/133363039-a2393ab3-517b-4e9d-a99b-9a3a805b81f6.JPG)
+
+
